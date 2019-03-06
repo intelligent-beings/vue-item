@@ -1,13 +1,13 @@
  
  
  <template>
-     <div id="hebody">
+     <div class="hebody">
         
         <mt-header fixed title="Header"></mt-header>
-        
-         
         <router-view></router-view>
         <baseRouter></baseRouter>
+        
+         
      </div>
  </template>
  
@@ -28,8 +28,9 @@
  </script>
  <style scoped>
   
-    #hebody{
-      padding: 40px;
+    .hebody{
+       
+      padding-top: 40px;
     }
 
  </style>

@@ -1,26 +1,26 @@
  <template>
 	 <div class="base">
 		 <div class="hom">
-			 <span  @click='goto("/hom")'>
-				<span><img src="../../../src/img/shouye2.png" alt=""></span><br>
+			 <router-link :class="{no:$route.path==='/hom'}" to="/hom">
+				<span ><img src="../../../src/img/shouye2.png" ></span><br>
 			 	<span>首页</span>
-			 </span>
+			 </router-link>
 		</div>
 		 <div class="mall" >
-		 	<span  @click='goto("/shopping")'>
-				<span><img src="../../../src/img/mall.png" alt=""></span><br>
+		 	<span :class="{no:$route.path==='/shopping'}" @click='goto("/shopping")'>
+				<span ><img src="../../../src/img/mall.png" alt="" ></span><br> 
 				<span>购物车</span>
 			</span>
 		</div>
 		 <div class="huiyuan" >
-			 <span @click='goto("/member")'>
+			 <span :class="{no:$route.path==='/member'}" @click='goto("/member")'>
 				<span> <img src="../../../src/img/shinshophuiyuan.png" alt=""></span><br>
 				<span>会员</span>
 			 </span>
 			
 		</div>
 		 <div>
-			 <span  @click='goto("/seek")'>
+			 <span :class="{no:$route.path==='/seek'}" @click='goto("/seek")'>
 				<span class="seek"><img src="../../../src/img/zoom-out.png" alt=""></span><br>
 				<span>搜索</span>
 			 </span>
@@ -30,12 +30,14 @@
  </template>
  
  <script>
+	  
  export default {
 	 
 	 methods:{
 		 goto(path){
+			  console.log(path);
 			  
-			 this.$router.push()
+			 this.$router.replace(path)
 		 }
 	 }
 
@@ -46,12 +48,14 @@
 <style lang="less" scoped>
  .base{
 	 width:100%;
-	 position: absolute;
+	 position:fixed;
 	 bottom: 0;
 	 left: 0;
-	 border-top:1px solid red;
+	 border-top:1px solid #dbdbdb;
 	 display: flex;	
-	 padding-top:5px;
+	 padding:10px 0px;
+	 z-index:100;
+	//  background: yellow;
 	div{
 	 flex:4;
 	 text-align:center;
@@ -64,6 +68,12 @@
 
 		} 
 	 }
+	}
+	.no{
+		
+		color:cornflowerblue;
+		 
+		
 	}
  }
  </style>

@@ -13,6 +13,8 @@ Vue.use(VueRouter);
 
 
 export default new VueRouter({
+    mode:"history",
+    
     routes:[
         { path:"/hom", component:hom },
         { path:"/member", component:member },
