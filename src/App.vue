@@ -2,25 +2,24 @@
  
  <template>
      <div id="hebody">
+        
         <mt-header fixed title="Header"></mt-header>
-        <router-link to='/hom'></router-link>   
-        <router-link to='/member'></router-link> 
-        <router-link to='/seek'></router-link>       
-        <router-link to='/shopping_car'></router-link> 
+        
+         
         <router-view></router-view>
-        <base_router></base_router>
+        <baseRouter></baseRouter>
      </div>
  </template>
  
  <script>
- import base_router from "./components/base_router/base_router.vue"
+ import baseRouter from "./components/baseRouter/baseRouter.vue"
+  
  export default {
 
      components:{
 
-        base_router,
-        
-
+        baseRouter,
+         
      }
 
 
@@ -28,7 +27,9 @@
  
  </script>
  <style scoped>
+  
     #hebody{
-      margin: 40px;
+      padding: 40px;
     }
+
  </style>

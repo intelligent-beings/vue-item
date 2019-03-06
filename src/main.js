@@ -1,15 +1,13 @@
 import Vue from "vue";
- 
+
 import router from "./router/router.js";
- 
-import { Header} from 'mint-ui';
+import { Header,Tabbar, TabItem } from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import App from './App.vue'
 
-Vue.component(Header.name, Header)
-
-
- 
+Vue.component(Header.name, Header);
+Vue.component(Tabbar.name, Tabbar);
+Vue.component(TabItem.name, TabItem);
 
 
 
