@@ -9,7 +9,28 @@
 </template>
 
 <script>
+
 export default {
+    
+    data(){
+
+        return{
+            getLunbo:[ ],
+
+        }
+    },
+    methods:{
+       getLun(){
+           this.$axios.get('url').then(function(res){
+               console.log('1');
+               
+           })
+           .catch(function(error){
+               console.log('error');
+               
+           })
+       }
+    }
 
 }
 
