@@ -1,10 +1,10 @@
  <template>
 	 <div class="base">
 		 <div class="hom">
-			 <router-link :class="{no:$route.path==='/hom'}" to="/hom">
+			 <span :class="{no:$route.path==='/hom'}" @click="goto('/hom')">
 				<span ><img src="../../../src/img/shouye2.png" ></span><br>
 			 	<span>首页</span>
-			 </router-link>
+			 </span>
 		</div>
 		 <div class="mall" >
 		 	<span :class="{no:$route.path==='/shopping'}" @click='goto("/shopping")'>
@@ -37,8 +37,10 @@
 		 goto(path){
 			  console.log(path);
 			  
-			 this.$router.replace(path)
+			 this.$router.replace(path);
+			  
 		 }
+		 
 	 }
 
 

@@ -4,7 +4,11 @@
      <div class="hebody">
         
         <mt-header fixed title="Header"></mt-header>
-        <router-view></router-view>
+        <transition name="xx">
+        <router-view ></router-view>
+
+        </transition>
+
         <baseRouter></baseRouter>
         
          
@@ -20,7 +24,9 @@
 
         baseRouter,
          
-     }
+     },
+      
+    
 
 
  }
@@ -31,6 +37,6 @@
     .hebody{
        
       padding-top: 40px;
-    }
-
+    };
+ 
  </style>

@@ -16,14 +16,11 @@ export default new VueRouter({
     mode:"history",
     
     routes:[
+        { path: '/', redirect: '/home'},
         { path:"/hom", component:hom },
         { path:"/member", component:member },
         { path:"/seek", component:seek },
         { path:"/shopping", component:shopping },
-        {
-            path: '/', 
-            redirect: '/home' 
-        }
     
     ]
 })
