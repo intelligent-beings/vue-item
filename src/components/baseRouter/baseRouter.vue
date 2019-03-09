@@ -55,9 +55,9 @@
 	 left: 0;
 	 border-top:1px solid #dbdbdb;
 	 display: flex;	
-	 padding:10px 0px;
+	 padding:0.15rem 0 ;
 	 z-index:100;
-	//  background: yellow;
+	 background:#fff;
 	div{
 	 flex:4;
 	 text-align:center;
@@ -65,8 +65,8 @@
 		 text-align: center;
 	 span{
  		img{
-	 		width:20px;
-	 		height:20px;
+	 		width:0.4rem;
+	 		height:0.4rem;
 
 		} 
 	 }

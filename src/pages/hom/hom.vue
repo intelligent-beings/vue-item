@@ -7,8 +7,43 @@
             </mt-swipe-item>
         </mt-swipe>
         <!-- 六格 -->
-        <ul>
-            <li ></li>
+        <ul class="xuan">
+            <li>
+                <router-link to="/hom/newmsg">
+                    <img src="../../img/user.png" alt="">
+                    <div>新闻咨询</div>
+                </router-link>
+            </li>
+             <li>
+                <router-link to="/">
+                    <img src="../../img/user.png" alt="">
+                    <div>商品采购</div>
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/">
+                    <img src="../../img/user.png" alt="">
+                    <div>图片显示</div>
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/">
+                    <img src="../../img/user.png" alt="">
+                    <div>图片显示</div>
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/">
+                    <img src="../../img/user.png" alt="">
+                    <div>图片显示</div>
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/">
+                    <img src="../../img/user.png" alt="">
+                    <div>图片显示</div>
+                </router-link>
+            </li>
         </ul>
 
     </div>
@@ -50,23 +85,38 @@ export default {
 }
 
 </script>
-<style scoped lang='less'>
- @import url('./less/hom.less');
+<style <style lang="less" scoped>
 div{
     width:100%;
-    overflow-x: hidden;
-   
+    height: auto;
+    overflow-x:hidden;
     .mint-swipe{
-        height:150px;
-       
+        height:3.5rem;   
         img{
             width:100%;
             height:100%;
         }
- }
- li{
-     height:30px;
-     background:red;
- }
+    }
+    .xuan{
+        display:flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        li{
+        @init:100%;
+            width:(@init/3);
+            text-align: center;
+            a{
+                text-decoration:none; 
+                color:#333; 
+                outline-color: aliceblue;
+                display:inline-block;
+                img{
+                    width:50px;
+                    height:50px;
+                }
+                
+            }
+        }
+    }
  }
 </style>

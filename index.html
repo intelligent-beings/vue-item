@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>y</title>
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"/>
+    <title>vue-item</title>
     <link  href="https://at.alicdn.com/t/font_1037835_468r5qz28nb.css">
     <!-- <link rel="stylesheet" href="./src/pages/css/mui.min.css"> -->
   </head>
@@ -14,18 +14,30 @@
     </div>
     
   </body>
+  <script>
+   (function (designWidth){
+        var size = document.documentElement.clientWidth /(designWidth / 100);
+        document.documentElement.style.fontSize = size + "px";
+    })(750);
+  </script>
   <style scoped>
 
-    html, body, a, .hebody, li{
-      width:100%;
+    html, body
+    {width:100%;
       height:100%;
+      font-size:0.3rem;
+    }
+    html, body, a, .hebody, ul, h1, h2, h3, h4, h5, h6, p {
+      border: 0;
       margin:0;
       padding:0;
       overflow-x: hidden;
+       
+      
       /* background:#d4d4d4; */
       z-index: -1;
       text-decoration:none; 
-      color:#333;   
+      color:#333;    
       list-style: none;
     };
     
