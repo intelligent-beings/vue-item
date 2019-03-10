@@ -71,12 +71,12 @@ export default {
                
             //    console.log(res.data)
                if(res.data.status === 1){
-                   console.log(res.data.data)
+                  
                     this.Lunbo =res.data.data
                    
                }
            }).catch(function (error) {
-                console.log(error);
+                Taoust(erroer)
             }); 
        },
     

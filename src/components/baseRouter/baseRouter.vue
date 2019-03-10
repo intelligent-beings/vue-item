@@ -35,8 +35,6 @@
 	 
 	 methods:{
 		 goto(path){
-			  console.log(path);
-			  
 			 this.$router.replace(path);
 			  
 		 }

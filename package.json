@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "vue-item",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "登 <2683999020@qq.com>",
@@ -36,6 +36,7 @@
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
+    "moment": "^2.24.0",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",

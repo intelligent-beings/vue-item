@@ -5,6 +5,8 @@ import member from "../pages/member/member.vue";
 import seek from "../pages/seek/seek.vue";
 import shopping from "../pages/shopping_car/shopping_car.vue"
 import newmsg from '../components/newmsg/newmsg.vue'
+import detalis from '../components/detalis/detalis.vue';
+
 
 
 
@@ -21,7 +23,7 @@ export default new VueRouter({
         { path:"/member", component:member },
         { path:"/seek", component:seek },
         { path:"/shopping", component:shopping },
-        { path:"/hom/newmsg",component:newmsg }
-        
+        { path:"/hom/newmsg",component:newmsg },
+        {path:'/hom/detalis/:id',component:detalis}
     ]
 })

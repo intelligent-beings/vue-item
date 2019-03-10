@@ -2,13 +2,14 @@
  
  <template>
      <div class="hebody">
-        
+        <!-- 头部 -->
         <mt-header fixed title="Header"></mt-header>
+
         <transition name="xx">
         <router-view ></router-view>
-
+         <!-- 活动组件  -->
         </transition>
-
+             <!--底部 -->  
         <baseRouter></baseRouter>
         
          
@@ -36,7 +37,8 @@
   
     .hebody{
        
-      padding-top: 40px;
+      padding-top: 0.8rem;
+      padding-bottom: 0.1rem
     };
  
  </style>
