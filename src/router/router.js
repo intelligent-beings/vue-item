@@ -6,7 +6,7 @@ import seek from "../pages/seek/seek.vue";
 import shopping from "../pages/shopping_car/shopping_car.vue"
 import newmsg from '../components/newmsg/newmsg.vue'
 import detalis from '../components/detalis/detalis.vue';
-
+import imgList from '../components/imgList/imgList.vue';
 
 
 
@@ -24,6 +24,7 @@ export default new VueRouter({
         { path:"/seek", component:seek },
         { path:"/shopping", component:shopping },
         { path:"/hom/newmsg",component:newmsg },
-        {path:'/hom/detalis/:id',component:detalis}
+        {path:'/hom/detalis/:id',component:detalis},
+        {path:'/hom/imgList',component:imgList},
     ]
 })

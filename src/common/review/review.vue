@@ -7,8 +7,10 @@
  <div class="revew">
       <h3>发表评论</h3>
       <hr/>
-      <textarea id="text" rows="8" placeholder='请输入评论' wrap="pyhsical"></textarea>
-      <mt-button size="large" type="primary">发表</mt-button>
+      <textarea id="text" rows="8" placeholder='请输入评论' wrap="pyhsical"
+        v-model="pinglun"
+      ></textarea>
+      <mt-button size="large" type="primary" @click="publis">发表</mt-button>
       <div class="revew_content" >
             <div class="revew_user" v-for="item in mes" :key="item.Id">
                 <div>第一楼 用户名:匿名 发表时间:&nbsp;&nbsp;{{item|myfilter()}}</div>
@@ -33,7 +35,8 @@ data(){
 
     return{
         pages:1,
-        mes:[]
+        mes:[],         //所有数据 
+        pinglun:''      //评论内容数据 
     }
 },
 created(){
@@ -49,7 +52,7 @@ methods:{
             if (res.data.status===1){
                 //第一页=第一页+第二次请求内容
                 this.mes = this.mes.concat(res.data.data) // concat函数连接字符串返回连接后结果 
-                console.log(this.mes);
+                console.log(res.data);
                 
             }
             
@@ -62,6 +65,7 @@ methods:{
 
 
     },
+    //下拉加载
     forMore(){
      
      this.pages++;
@@ -69,6 +73,18 @@ methods:{
      
 
 
+
+    },
+    //发表评论
+    publis(){
+       this.$axios.post('http://118.126.92.176:8080/hemu/get_product_list',{
+            productId:this.pinglun.trim()
+
+       }).then(function(res){
+           
+
+       })
+       
 
     }
 

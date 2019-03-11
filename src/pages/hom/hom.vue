@@ -15,7 +15,7 @@
                 </router-link>
             </li>
              <li>
-                <router-link to="/">
+                <router-link to="/hom/imgList">
                     <img src="../../img/user.png" alt="">
                     <div>商品采购</div>
                 </router-link>
