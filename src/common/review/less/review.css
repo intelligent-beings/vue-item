@@ -1,0 +1,21 @@
+.revew #text {
+  width: 95%;
+  height: auto;
+  font-size: 0.3rem;
+}
+.revew .revew_content {
+  width: 100%;
+  height: auto;
+  margin: 0.2rem 0;
+}
+.revew .revew_content .revew_user {
+  margin: 0.15rem 0;
+  line-height: 0.5rem;
+  font-size: 0.25rem;
+}
+.revew .revew_content .revew_user div:nth-child(1) {
+  background: #d7d7d7;
+}
+.revew .revew_content .revew_text {
+  font-size: 0.3rem;
+}

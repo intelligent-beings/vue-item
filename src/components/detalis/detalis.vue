@@ -14,13 +14,21 @@
      <div class="titles_text">
          {{messages.subImages}} 
           {{messages.subtitle}}
- 
+            
      </div>
+     <!-- 发表评论组件 -->
+     <review></review>
     </div>
 </template>
 <script>
+//导入评论组件
+import review from '../../common/review/review';
+
 export default {
     
+components:{
+    review
+},
 data(){
     return {
         id:this.$route.params.id,
@@ -38,9 +46,7 @@ methods:{
             
             if (res.data.status===1){
                 
-                console.log('~~调用了');
                 this.messages = res.data.data[0] 
-                console.log( res.data);
                 
             }
             

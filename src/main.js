@@ -1,7 +1,7 @@
 import Vue from "vue";
 
 import router from "./router/router.js";
-import { Header,Tabbar, TabItem ,Swipe,SwipeItem} from 'mint-ui';
+import { Header,Tabbar, TabItem ,Swipe,SwipeItem, Button, Toast} from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import APP from './App.vue';
 import axios from 'axios';
@@ -15,6 +15,9 @@ Vue.component(Tabbar.name, Tabbar);
 Vue.component(TabItem.name, TabItem);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component( Button.name, Button);
+Vue.component(Toast.name, Toast);
+
 // 
 
 Vue.filter('myfilter',function(datatime,format='YY-MM-DD HH:MM:ss'){

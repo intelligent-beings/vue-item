@@ -38,7 +38,7 @@
     .hebody{
        
       padding-top: 0.8rem;
-      padding-bottom: 0.1rem
+      padding-bottom:1.2rem
     };
  
  </style>
