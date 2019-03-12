@@ -6,13 +6,15 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "st": "yarn run dev",
     "build": "node build/build.js"
   },
   "dependencies": {
     "babel-plugin-component": "^1.1.1",
+    "babel-polyfill": "^6.26.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "ly-tab": "^2.1.2",
     "mint-ui": "^2.2.13",
     "mockjs": "^1.0.1-beta3",
     "vue": "^2.5.2",

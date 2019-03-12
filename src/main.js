@@ -4,10 +4,12 @@ import router from "./router/router.js";
 import { Header,Tabbar, TabItem ,Swipe,SwipeItem, Button, Toast} from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import APP from './App.vue';
-import axios from 'axios';
+import axios from 'axios';     //发请求库
 import moment from "moment";
+import LyTab from 'ly-tab';    //图片列表滑动库
+ 
 var Mock = require('mockjs')
-// import 'babel-polyfill';            //此为一个补丁,发请求兼容ie9
+import 'babel-polyfill';            //此为一个补丁,发请求兼容ie9
 
 //这是引入mint ui 里的组件定议部分
 Vue.component(Header.name, Header);
@@ -18,8 +20,9 @@ Vue.component(SwipeItem.name, SwipeItem);
 Vue.component( Button.name, Button);
 Vue.component(Toast.name, Toast);
 
-// 
+Vue.use(LyTab);
 
+//时间格式化输出部分
 Vue.filter('myfilter',function(datatime,format='YY-MM-DD HH:MM:ss'){
     // datatime形参接收:给定的时间字符串,第二个形参接收格式
     //用moment 模块来解决时间格式化问题

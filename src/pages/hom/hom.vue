@@ -13,7 +13,7 @@
                     <img src="../../img/user.png" alt="">
                     <div>新闻咨询</div>
                 </router-link>
-            </li>
+            </li> 
              <li>
                 <router-link to="/hom/imgList">
                     <img src="../../img/user.png" alt="">
@@ -44,8 +44,7 @@
                     <div>图片显示</div>
                 </router-link>
             </li>
-        </ul>
-
+            </ul>
     </div>
 </template>
 
