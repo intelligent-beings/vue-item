@@ -1,27 +1,24 @@
 import Vue from "vue";
-
 import router from "./router/router.js";
-import { Header,Tabbar, TabItem ,Swipe,SwipeItem, Button, Toast,
-    Lazyload} from 'mint-ui';
-import 'mint-ui/lib/style.css';
-import APP from './App.vue';
+
+// import { Header,Tabbar, TabItem ,Swipe,SwipeItem, Button, Toast,
+//     Lazyload} from 'mint-ui';
+ 
 import axios from 'axios';     //发请求库
-import moment from "moment";
-import LyTab from 'ly-tab';     //图片懒加载库
+import moment from "moment";    //时间格式化库
 var Mock = require('mockjs')
-import 'babel-polyfill';            //此为一个补丁,发请求兼容ie9
-import  VueJsonp  from  'vue-jsonp';
+import 'babel-polyfill';            //此为一个补丁,兼容ie9
+import  VueJsonp  from  'vue-jsonp';        //发jsonp请求
 
-Vue.use(VueJsonp);          //这是vue发送jsonp 包
+import LyTab from 'ly-tab';     //列表滑动库
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
 
-Vue.use(Lazyload);          //这是引入mint ui 里的组件定议部分
-Vue.component(Header.name, Header);
-Vue.component(Tabbar.name, Tabbar);
-Vue.component(TabItem.name, TabItem);
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
-Vue.component( Button.name, Button);
-Vue.component(Toast.name, Toast);
+
+import APP from './App.vue';
+Vue.use(MintUI)
+
+Vue.use(VueJsonp);          //这是vue发送jsonp请求包
 
 Vue.use(LyTab);
 
@@ -42,9 +39,6 @@ Vue.filter('myfilter',function(datatime,format='YY-MM-DD HH:MM:ss'){
 Vue.prototype.site = '/api/'; //代理服务
 
 Vue.prototype.$axios= axios;  //将请求挂载到实例原型链上
-
-
-
 
 new Vue({
     el:'#app',

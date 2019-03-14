@@ -17,13 +17,13 @@
              <li>
                 <router-link to="/hom/imgList">
                     <img src="../../img/user.png" alt="">
-                    <div>商品采购</div>
+                    <div> 图片显示</div>
                 </router-link>
             </li>
             <li>
                 <router-link to="/">
                     <img src="../../img/user.png" alt="">
-                    <div>图片显示</div>
+                    <div>商品采购</div>
                 </router-link>
             </li>
             <li>
