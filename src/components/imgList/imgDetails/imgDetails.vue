@@ -4,10 +4,18 @@
             <h3>这是很美丽的衣服吧</h3>
         </div>
         <div class="details_cent">
-            <span>发表时间:{{ }}</span>
+            <span>发表时间:{{|myfilter()}}</span>
             <span>点击次数:0</span>
         </div>
         <hr>
+        <div class="details_img">
+            <img v-for="(item,index ) in imglist" 
+            :key="index" 
+            :src="item.img"
+            @click="imgclick"
+            class="details_imgx"
+            >
+        </div>
         <content>
             功能性: 保暖发热材质: 羊绒尺码: S M L XL 2XL 3XL
             面料: 羊绒图案: 纯色风格: 通勤领子: 连帽毛线粗细: 
@@ -22,12 +30,51 @@
             衣长: 常规款
             服装版型: 直筒
         </content>
+        <review></review>
 
     </div>
 </template>
 
 <script>
+import review from '../../../common/review/review.vue';
 export default {
+
+    data(){
+        return {
+           imglist:'',
+           imgck:'flast'
+        }
+    },
+
+    components:{
+        review      //评论组件
+
+     },
+    created(){
+        this.getimg();
+         
+        
+    },
+
+    methods:{
+        //请求图片
+          getimg(){
+            this.$jsonp('http://list.ydui.org/getdata.php',{type:'backposition'})
+            .then((res)=>{
+               
+            console.log(res);
+            
+            this.imglist = res
+            })
+            .catch((error)=>{console.log(error)})
+          },
+        // 缩略图点击事件
+        imgclick(){
+            this.imgck=!(this.imgck);
+            console.log(111);
+            
+        }
+    }
 
 
 }
@@ -49,6 +96,13 @@ export default {
             justify-content: space-between;
             padding:0 0.2rem;
             font-size:0.2rem;
+        }
+        .details_img{
+            .details_imgx{
+                width:1rem;
+                
+            }
+           
         }
         content{
             font-size: 0.3rem;

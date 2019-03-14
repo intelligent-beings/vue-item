@@ -52,8 +52,7 @@ methods:{
             if (res.data.status===1){
                 //第一页=第一页+第二次请求内容
                 this.mes = this.mes.concat(res.data.data) // concat函数连接字符串返回连接后结果 
-                console.log(res.data);
-                
+            
             }
             
 
