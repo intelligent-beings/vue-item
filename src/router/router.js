@@ -7,8 +7,8 @@ import shopping from "../pages/shopping_car/shopping_car.vue"
 import newmsg from '../components/newmsg/newmsg.vue'
 import detalis from '../components/detalis/detalis.vue';
 import imgList from '../components/imgList/imgList.vue';
-import imgDetails from '../components/imgList/imgDetails/imgDetails.vue'
-
+import imgDetails from '../components/imgDetails/imgDetails.vue'
+import productList from '../components/productList/productList.vue'
 
 
 Vue.use(VueRouter);
@@ -26,6 +26,7 @@ export default new VueRouter({
         { path:"/hom/newmsg",component:newmsg },
         {path:'/hom/detalis/:id',component:detalis},
         {path:'/hom/imgList',component:imgList},
-        {path:'/hom/imgList/:index',component:imgDetails}
+        {path:'/hom/imgList/:index',component:imgDetails},
+        {path:'/hom/producList',component:productList}
     ]
 })

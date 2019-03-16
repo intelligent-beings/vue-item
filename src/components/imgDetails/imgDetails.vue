@@ -4,18 +4,21 @@
             <h3>这是很美丽的衣服吧</h3>
         </div>
         <div class="details_cent">
-            <span>发表时间:{{|myfilter()}}</span>
+            <span>发表时间:{{''|myfilter()}}</span>
             <span>点击次数:0</span>
         </div>
         <hr>
-        <div class="details_img">
-            <img v-for="(item,index ) in imglist" 
-            :key="index" 
-            :src="item.img"
-            @click="imgclick"
-            class="details_imgx"
-            >
-        </div>
+         
+        <!-- <div style="height: 1000px; background-color: pink;"></div> -->
+         
+        <vue-preview
+        :list="imglist"
+        :thumbImageStyle="{width: '80px', height: '80px', margin: '10px'}"
+        :previewBoxStyle="{border: '1px solid #eee'}"
+        :tapToClose="true"
+        @close="closeHandler"
+        @destroy="destroyHandler"
+        />
         <content>
             功能性: 保暖发热材质: 羊绒尺码: S M L XL 2XL 3XL
             面料: 羊绒图案: 纯色风格: 通勤领子: 连帽毛线粗细: 
@@ -31,53 +34,56 @@
             服装版型: 直筒
         </content>
         <review></review>
-
     </div>
 </template>
 
 <script>
-import review from '../../../common/review/review.vue';
+import review from '../../common/review/review';
 export default {
 
     data(){
         return {
-           imglist:'',
-           imgck:'flast'
+           imglist:[],
+          
         }
     },
-
     components:{
         review      //评论组件
 
      },
     created(){
         this.getimg();
-         
+        
         
     },
-
     methods:{
         //请求图片
           getimg(){
             this.$jsonp('http://list.ydui.org/getdata.php',{type:'backposition'})
             .then((res)=>{
-               
-            console.log(res);
-            
-            this.imglist = res
+                
+                console.log(res);
+                
+                this.imglist = res
             })
             .catch((error)=>{console.log(error)})
           },
         // 缩略图点击事件
-        imgclick(){
-            this.imgck=!(this.imgck);
-            console.log(111);
+        closeHandler(){},
+        destroyHandler(){},
+        mm(){
+            console.log(2);
             
         }
-    }
+    } 
 
-
+        
+    
+       
 }
+
+
+
 
 </script>
 <style lang="less" scoped>
@@ -98,9 +104,12 @@ export default {
             font-size:0.2rem;
         }
         .details_img{
-            .details_imgx{
+            .details_imgsmal{
                 width:1rem;
-                
+            }
+            .details_imgmax{
+               width:8rem;
+               height:8rem;
             }
            
         }

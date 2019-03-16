@@ -36,7 +36,8 @@
  <style scoped>
   
     .hebody{
-       
+      width:100%;
+      height:100%;
       padding-top: 0.8rem;
       padding-bottom:1.2rem
     };

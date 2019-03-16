@@ -13,10 +13,11 @@ import  VueJsonp  from  'vue-jsonp';        //发jsonp请求
 import LyTab from 'ly-tab';     //列表滑动库
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
-
-
+import VuePreview from 'vue2-preview'           //vue缩略图插件
 import APP from './App.vue';
-Vue.use(MintUI)
+
+Vue.use(MintUI);
+Vue.use(VuePreview);         //vue缩略图插件
 
 Vue.use(VueJsonp);          //这是vue发送jsonp请求包
 

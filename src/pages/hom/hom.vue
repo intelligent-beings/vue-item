@@ -10,38 +10,38 @@
         <ul class="xuan">
             <li>
                 <router-link to="/hom/newmsg">
-                    <img src="../../img/user.png" alt="">
+                    <img src="../../img/bendihua.png">
                     <div>新闻咨询</div>
                 </router-link>
             </li> 
              <li>
                 <router-link to="/hom/imgList">
-                    <img src="../../img/user.png" alt="">
-                    <div> 图片显示</div>
+                    <img src="../../img/baogao.png" alt="">
+                    <div> 图片分享</div>
                 </router-link>
             </li>
             <li>
-                <router-link to="/">
-                    <img src="../../img/user.png" alt="">
+                <router-link to='/hom/producList'>
+                    <img src="../../img/售后服务-自动评价.png" alt="">
                     <div>商品采购</div>
                 </router-link>
             </li>
             <li>
                 <router-link to="/">
-                    <img src="../../img/user.png" alt="">
-                    <div>图片显示</div>
+                    <img src="../../img/售后服务-自动评价.png" alt="">
+                    <div>留言反馈</div>
                 </router-link>
             </li>
             <li>
                 <router-link to="/">
-                    <img src="../../img/user.png" alt="">
-                    <div>图片显示</div>
+                    <img src="../../img/营销工具-关注店铺有礼.png" alt="">
+                    <div>视频专区</div>
                 </router-link>
             </li>
             <li>
                 <router-link to="/">
-                    <img src="../../img/user.png" alt="">
-                    <div>图片显示</div>
+                    <img src="../../img/nan.png" alt="">
+                    <div>联系我们</div>
                 </router-link>
             </li>
             </ul>
@@ -97,9 +97,11 @@ div{
         }
     }
     .xuan{
+        margin:0.3rem 0;
         display:flex;
         justify-content: space-around;
         flex-wrap:wrap;
+        font-size:0.2rem;
         li{
         @init:100%;
             width:(@init/3);
