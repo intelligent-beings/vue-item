@@ -19,3 +19,12 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+手机调试:
+处于同一网络环境中,
+2 打开pack.json 文件,在dev 脚本中添加一个 --host 指令把当前 wifi ip 地址,
+设置为 --host ip  
+3 cmd 里运行 ipconfig 命令 查看无线局域网 ip 
+4 在手机浏览器 打开 设置的地地 调节

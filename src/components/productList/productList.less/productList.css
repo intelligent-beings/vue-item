@@ -1,11 +1,9 @@
 #producList {
-  width: 100%;
-  height: 100%;
-  padding: 0 0.13rem;
+  height: auto;
+  padding: 0.13rem  0.13rem 1.5rem 0.13rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
 }
 #producList .msg {
   width: 48%;
@@ -16,7 +14,15 @@
 }
 #producList .msg img {
   width: 100%;
-  height: 82%;
+  height: 4.2rem;
+}
+#producList .msg h5 {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 #producList .msg .producList_jia {
   padding: 0.05rem;
@@ -39,4 +45,7 @@
 }
 #producList .msg .producList_jia div:nth-child(2) span {
   margin: 0 0.15rem;
+}
+#producList .mint-button--danger {
+  margin-top: 0.3rem;
 }

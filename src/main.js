@@ -1,12 +1,7 @@
 import Vue from "vue";
 import router from "./router/router.js";
-
-// import { Header,Tabbar, TabItem ,Swipe,SwipeItem, Button, Toast,
-//     Lazyload} from 'mint-ui';
- 
 import axios from 'axios';     //发请求库
 import moment from "moment";    //时间格式化库
-var Mock = require('mockjs')
 import 'babel-polyfill';            //此为一个补丁,兼容ie9
 import  VueJsonp  from  'vue-jsonp';        //发jsonp请求
 
@@ -21,7 +16,7 @@ Vue.use(VuePreview);         //vue缩略图插件
 
 Vue.use(VueJsonp);          //这是vue发送jsonp请求包
 
-Vue.use(LyTab);
+Vue.use(LyTab);             //列表滑动库
 
 //时间格式化输出部分
 Vue.filter('myfilter',function(datatime,format='YY-MM-DD HH:MM:ss'){
