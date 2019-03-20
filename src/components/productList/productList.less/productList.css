@@ -17,7 +17,9 @@
   height: 4.2rem;
 }
 #producList .msg h5 {
-  width: 80%;
+  width: 70%;
+  height: 0.7rem;
+  line-height: 0.35rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

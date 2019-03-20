@@ -1,0 +1,23 @@
+===========
+
+这里用编程导航:也就是用js 实现跳转路由
+2 注意$router 导航路由, $route 是路由参数也是路由器
+3 $ 是原型上的方法
+4 动态传id 参数 要注意引号和双引号的使用
+5 以字符串的形式和对象的形式传参
+对象push({path:'/xxx/xx'+id})
+push{{name:'',params:{id:id}}}
+push({path:'',query:{id:id}}) 以?号传参
+name value 不能与路由里component 名相同
+字符串 push ('/xx/yy'+id)
+
+注意: 
+样式最外层的div 设置宽高 后,要设置
+box-size:box-border; 功能在规定的宽高内绘置内容
+<hr> 横线 style 可以设置样式
+替换公用组件内部使用的变量数据 可以通过改变数据 内部变量属与组件使用
+的名字相同思路
+
+hr 去掉默认样式border:none; 设置一px 高度才可以设置背景
+background-color
+
